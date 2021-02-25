@@ -1,0 +1,2 @@
+# Timemanager
+Ruby Timemanager application
