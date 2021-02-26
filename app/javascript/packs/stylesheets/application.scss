@@ -1,0 +1,88 @@
+/// Media query for retina images (device-pixel-ratio)
+///
+/// @param {Number} $ratio [2] - Device pixel ratio
+/// @content Passed content will be outputted within the media query
+///
+/// @example scss - Providing a @2x image for screens that support it
+///   background-image: app-image-url("my-image.png");
+///
+///   @include app-device-pixel-ratio {
+///     background-image: app-image-url("my-image-2x.png");
+///   }
+///
+/// @example scss - Using a custom ratio
+///   background-image: app-image-url("my-image.png");
+///
+///   @include app-device-pixel-ratio {
+///     background-image: app-image-url("my-image-2x.png");
+///   }
+///
+///   @include app-device-pixel-ratio(3) {
+///     background-image: app-image-url("my-image-3x.png");
+///   }
+///
+/// @access public
+
+@mixin app-device-pixel-ratio($ratio: 2) {
+  // stylelint-disable indentation
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min-resolution: #{($ratio * 96)}dpi),
+  only screen and (min-resolution: #{$ratio}dppx) {
+    @content;
+  }
+}
+/// Path to the assets directory, with trailing slash.
+///
+/// This is the directory where the images and fonts subdirectories live. You
+/// will need to make this directory available via your application – see the
+/// README for details.
+///
+/// @type String
+/// @access public
+
+$app-assets-path: "../../../assets/" !default;
+
+/// Path to the images folder, with trailing slash.
+///
+/// @type String
+/// @access public
+
+$app-images-path: "#{$app-assets-path}images/" !default;
+
+/// Path to the fonts folder, with trailing slash.
+///
+/// @type String
+/// @access public
+
+$app-fonts-path: "#{$app-assets-path}fonts/" !default;
+
+@function app-image-url($filename) {
+  @return url($app-images-path + $filename);
+}
+
+@function app-font-url($filename) {
+  @return   url($app-fonts-path + $filename);
+}
+
+$app-footer-image-width-2x: 240px;
+$app-footer-image-height-2x: 250px;
+
+// Half the 2x image so that it fits the regular 1x size.
+$app-footer-image-width: ($app-footer-image-width-2x / 2);
+$app-footer-image-height: ($app-footer-image-height-2x / 2);
+
+.app-footer__copyright-logo {
+  display: inline-block;
+  min-width: $app-footer-image-width;
+  padding-top: ($app-footer-image-height);
+  background-image: app-image-url("tm_logo.png");
+  @include app-device-pixel-ratio {
+    background-image: app-image-url("tm_logox2.png");
+  }
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: $app-footer-image-width $app-footer-image-height;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
