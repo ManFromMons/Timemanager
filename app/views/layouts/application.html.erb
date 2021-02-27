@@ -18,9 +18,7 @@
   <link rel="apple-touch-icon" sizes="152x152" href="<%= asset_pack_url('media/images/govuk-apple-touch-icon-152x152.png') %>">
   <link rel="apple-touch-icon" href="<%= asset_pack_url('media/images/govuk-apple-touch-icon.png') %>">
 
-  <%= stylesheet_pack_tag 'govuk', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <meta property="og:image" content="<%= asset_pack_url('media/images/govuk-opengraph-image.png') %>">
 </head>
@@ -125,6 +123,6 @@
     </div>
   </div>
 </footer>
-<%= javascript_pack_tag 'govuk', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
 </html>

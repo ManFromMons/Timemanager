@@ -7,8 +7,13 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "./stylesheets/application.scss"
+
+require("govuk-frontend/govuk/all").initAll()
+
+require.context('govuk-frontend/govuk/assets/images', true)
 require.context('../../assets/', true)
+
+import "./stylesheets/application.scss"
 
 Rails.start()
 Turbolinks.start()
