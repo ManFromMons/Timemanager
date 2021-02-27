@@ -1,0 +1,54 @@
+@import "govuk.scss";
+
+@function app-image-url($filename) {
+  @return url($app-images-path + $filename);
+}
+
+@function app-font-url($filename) {
+  @return   url($app-fonts-path + $filename);
+}
+
+@font-face {
+  font-family: "ArbutusSlab";
+  src: app-font-url("ArbutusSlab-Regular.woff2") format("woff2"),
+  app-font-url("ArbutusSlab-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CabinSketch";
+  src: app-font-url("CabinSketch-Regular.woff2") format("woff2"),
+  app-font-url("CabinSketch-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "CabinSketch";
+  src: app-font-url("CabinSketch-Bold.woff2") format("woff2"),
+  app-font-url("CabinSketch-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+.app-footer__copyright-logo {
+  display: inline-block;
+  min-width: $app-footer-image-width;
+  padding-top: ($app-footer-image-height);
+  background-image: app-image-url("tm_logo.png");
+  @include govuk-device-pixel-ratio {
+    background-image: app-image-url("tm_logox2.png");
+  }
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: $app-footer-image-width $app-footer-image-height;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.local {
+  font-family: ArbutusSlab;
+}
+
+.large_local {
+  font-family: CabinSketch;
+  font-weight: bold;
+}
