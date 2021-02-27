@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  common:
+    service_name: "Effort Record"
+    sign_in: 'Sign in'
+    sign_out: 'Sign out'

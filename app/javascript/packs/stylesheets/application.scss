@@ -31,7 +31,7 @@
 .app-footer__copyright-logo {
   display: inline-block;
   min-width: $app-footer-image-width;
-  padding-top: ($app-footer-image-height)/1.5;
+  padding-top: ($app-footer-image-height);
   background-image: app-image-url("tm_logo.svg");
   @include govuk-device-pixel-ratio {
     background-image: app-image-url("tm_logo.svg");
