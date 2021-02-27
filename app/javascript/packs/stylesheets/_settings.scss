@@ -24,7 +24,7 @@ $app-images-path: "#{$app-assets-path}images/" !default;
 $app-fonts-path: "#{$app-assets-path}fonts/" !default;
 
 $app-footer-image-width-2x: 240px;
-$app-footer-image-height-2x: 250px;
+$app-footer-image-height-2x: 240px;
 
 // Half the 2x image so that it fits the regular 1x size.
 $app-footer-image-width: ($app-footer-image-width-2x / 2);
@@ -86,10 +86,12 @@ $govuk-colours: (
         "warning": #DE8F1A,
         "success": #0EB163,
 
-        "primary": #9B1A47,
-        "secondary": #007E8A,
+        "primary": #c2955cff,
+        "secondary": #1d74b4,
         "dark-grey": #2F2F2F,
         "mid-grey": #908f8f,
         "focus": #ffdd00,
         "light-grey": #f3f2f1,
 );
+
+$govuk-brand-colour : govuk-colour("primary");

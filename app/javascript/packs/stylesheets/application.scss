@@ -31,10 +31,10 @@
 .app-footer__copyright-logo {
   display: inline-block;
   min-width: $app-footer-image-width;
-  padding-top: ($app-footer-image-height);
-  background-image: app-image-url("tm_logo.png");
+  padding-top: ($app-footer-image-height)/1.5;
+  background-image: app-image-url("tm_logo.svg");
   @include govuk-device-pixel-ratio {
-    background-image: app-image-url("tm_logox2.png");
+    background-image: app-image-url("tm_logo.svg");
   }
   background-repeat: no-repeat;
   background-position: 50% 0%;
@@ -42,6 +42,28 @@
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.app-header {
+  @extend .govuk-header;
+
+  background-color: darken(govuk-colour('primary'), 30%);
+}
+
+.app-footer {
+  @extend .govuk-footer;
+
+  background-color: lighten(govuk-colour('primary'), 30%);
+}
+
+.govuk-header__logotype {
+  img {
+    width:40px;
+  }
+}
+
+.govuk-header__logotype-text {
+  vertical-align: top;
 }
 
 .local {
