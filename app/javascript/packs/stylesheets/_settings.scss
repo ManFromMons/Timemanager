@@ -30,3 +30,66 @@ $app-footer-image-height-2x: 250px;
 $app-footer-image-width: ($app-footer-image-width-2x / 2);
 $app-footer-image-height: ($app-footer-image-height-2x / 2);
 
+$govuk-global-styles: true;
+
+$govuk-compatibility-govukfrontendtoolkit: false;
+$govuk-compatibility-govuktemplate: false;
+$govuk-compatibility-govukelements: false;
+
+$govuk-font-family: "ArbutusSlab", Helvetica, Arial, sans-serif;
+$govuk-font-family-print: "ArbutusSlab", Helvetica, Arial, sans-serif;
+
+$govuk-font-weight-light: 300;
+$govuk-font-weight-regular: 400;
+$govuk-font-weight-semi-bold: 600;
+$govuk-font-weight-bold: 700;
+
+$govuk-heading-xl: 48px;
+$govuk-heading-l: 27px;
+
+$govuk-link-colour: #007194;
+$govuk-link-hover-colour: #2b8cc4;
+$govuk-link-visited-colour: #4c2c92;
+
+$govuk-colours: (
+        "purple": #2e358b,
+        "light-purple": #6f72af,
+        "bright-purple": #912b88,
+        "pink": #d53880,
+        "light-pink": #f499be,
+        "red": #b10e1e,
+        "bright-red": #df3034,
+        "orange": #f47738,
+        "brown": #b58840,
+        "yellow": #ffbf47,
+        "light-green": #85994b,
+        "green": #006435,
+        "turquoise": #28a197,
+        "light-blue": #2b8cc4,
+        "blue": #005ea5,
+
+        "black": #0b0c0c,
+        "grey-1": #6f777b,
+        "grey-2": #bfc1c3,
+        "grey-3": #dee0e2,
+        "grey-4": #f8f8f8,
+        "grey-5": #eeeeee,
+        "white": #ffffff,
+        "green-2": #F0FFF1,
+        "green-3": #006435,
+
+        "link": #007194,
+        "link-hover": #15a0cc,
+        "link-visited": #15a0cc,
+
+        "failure": #B10E1E,
+        "warning": #DE8F1A,
+        "success": #0EB163,
+
+        "primary": #9B1A47,
+        "secondary": #007E8A,
+        "dark-grey": #2F2F2F,
+        "mid-grey": #908f8f,
+        "focus": #ffdd00,
+        "light-grey": #f3f2f1,
+);

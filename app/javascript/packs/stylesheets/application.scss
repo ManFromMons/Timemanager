@@ -8,6 +8,26 @@
   @return   url($app-fonts-path + $filename);
 }
 
+@font-face {
+  font-family: "ArbutusSlab";
+  src: app-font-url("ArbutusSlab-Regular.woff2") format("woff2"),
+  app-font-url("ArbutusSlab-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CabinSketch";
+  src: app-font-url("CabinSketch-Regular.woff2") format("woff2"),
+  app-font-url("CabinSketch-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "CabinSketch";
+  src: app-font-url("CabinSketch-Bold.woff2") format("woff2"),
+  app-font-url("CabinSketch-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
 .app-footer__copyright-logo {
   display: inline-block;
   min-width: $app-footer-image-width;
@@ -22,4 +42,13 @@
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.local {
+  font-family: ArbutusSlab;
+}
+
+.large_local {
+  font-family: CabinSketch;
+  font-weight: bold;
 }
