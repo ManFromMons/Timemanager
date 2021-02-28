@@ -78,7 +78,6 @@
     </div>
   </div>
 </header>
-
 <div class="govuk-width-container app-width-container--wide">
   <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
@@ -94,6 +93,15 @@
   <a href="#" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+    <% unless flash.empty? %>
+      <script type="text/javascript">
+          <% flash.each do |f| %>
+          <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+          toastr['<%= type %>']('<%= f[1] %>');
+          <% end %>
+      </script>
+    <% end %>
+
     <%= yield %>
   </main>
 </div>

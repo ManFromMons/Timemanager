@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+global.toastr = require("toastr")
 require("govuk-frontend/govuk/all").initAll()
 
 require.context('govuk-frontend/govuk/assets/images', true)

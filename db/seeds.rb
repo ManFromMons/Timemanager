@@ -6,3 +6,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.find_or_initialize_by(email: 'test@test.com', name: 'Julian')
+user.password = 'letmein'
+user.superadmin_role = true
+user.supervisor_role = true
+user.user_role = true
+user.save!
